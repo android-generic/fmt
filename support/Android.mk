@@ -1,15 +1,4 @@
-LOCAL_PATH := $(call my-dir)
-include $(CLEAR_VARS)
-
-LOCAL_MODULE := fmt_static
-LOCAL_MODULE_FILENAME := libfmt
-
-LOCAL_SRC_FILES := ../src/format.cc
-
-LOCAL_C_INCLUDES := $(LOCAL_PATH)
-LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)
-
-LOCAL_CFLAGS += -std=c++11 -fexceptions
-
-include $(BUILD_STATIC_LIBRARY)
-
+# The Android.mk provided by the upstream fmtlib repository is for use with the
+# NDK and is not appropriate for the platform build. When integrating changes
+# from upstream, omit their Android.mk and leave the existing Android.bp
+# instead.
